@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wave Data
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   dayMonsters:
-  - {fileID: 6861092550293363033, guid: 0f5a5ad6d30804664a25ad9e19957dcb, type: 3}
-  - {fileID: 9024581148646232074, guid: bca60aa9cd57f4a02b8352748d50963f, type: 3}
+  - {fileID: 11400000, guid: ae2e267dadaa64acd9b87bb2a02de42f, type: 2}
+  - {fileID: 11400000, guid: b7cd915a3174d4319a16eb2ee15ebd27, type: 2}

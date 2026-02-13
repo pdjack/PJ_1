@@ -21,9 +21,9 @@ public class MonsterSpawn : MonoBehaviour
         
         if (_currentSpawnIndex < monsters.dayMonsters.Count && _timer > spawnInterval)
         {
-            SpawnMonster(monsters.dayMonsters[_currentSpawnIndex]);
+            SpawnMonster(monsters.dayMonsters[_currentSpawnIndex].monsterPrefab);
 
-            spawnInterval = monsters.dayMonsters[_currentSpawnIndex].GetComponent<Monster>().monsterData.spawnInterval;
+            spawnInterval = monsters.dayMonsters[_currentSpawnIndex].spawnInterval;
             _currentSpawnIndex = Random.Range(0, monsters.dayMonsters.Count);
             _timer = 0;
         }
@@ -31,8 +31,8 @@ public class MonsterSpawn : MonoBehaviour
 
     private void SpawnMonster(GameObject monster)
     {
-        int randomX = Random.Range(-9, 9);
-        int randomY = Random.Range(-9, 9);
+        int randomX = Random.Range(4, 9);
+        int randomY = Random.Range(7, 9);
         Instantiate(monster, new Vector2(randomX, randomY), Quaternion.identity);
     }
 }

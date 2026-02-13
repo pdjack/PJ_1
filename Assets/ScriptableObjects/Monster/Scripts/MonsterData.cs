@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Attack Data", menuName = "Monster/MainData")]
+[CreateAssetMenu(fileName = "New Attack Data", menuName = "ScriptableObjects/Monster/MainData")]
 public class MonsterData : ScriptableObject
 {
     public string monsterName;

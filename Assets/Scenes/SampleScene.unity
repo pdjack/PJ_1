@@ -395,6 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1879287086}
   - component: {fileID: 1879287085}
+  - component: {fileID: 1879287087}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -476,6 +477,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1879287087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879287084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334cf964fc32f40fda0858d4c8c4282f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  equipment: {fileID: 11400000, guid: 8adabce1f27cd487cab0a65210fb8f10, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Wave Data", menuName = "Monster/WaveData")]
+[CreateAssetMenu(fileName = "New Wave Data", menuName = "ScriptableObjects/Monster/WaveData")]
 public class WaveData : ScriptableObject
 {
-    public List<GameObject> dayMonsters = new List<GameObject>();
+    public List<MonsterData> dayMonsters = new List<MonsterData>();
 }
