@@ -4,7 +4,6 @@ using UnityEngine;
 public class MonsterData : ScriptableObject
 {
     public string monsterName;
-    public float spawnInterval;
     public GameObject monsterPrefab;
     
     public MonAttackData attack; // 공격 데이터 참조

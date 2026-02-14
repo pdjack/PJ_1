@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c4ff7afb2524177aad55905979f60e, type: 3}
+  m_Name: WaveData
+  m_EditorClassIdentifier: Assembly-CSharp::WaveData
+  waveData:
+  - monsters:
+    - {fileID: 11400000, guid: ae2e267dadaa64acd9b87bb2a02de42f, type: 2}
+    - {fileID: 11400000, guid: b7cd915a3174d4319a16eb2ee15ebd27, type: 2}
+    waveStep: 1
+    spawnInterval: 3
+    totalMonsters: 3
+  - monsters:
+    - {fileID: 11400000, guid: ae2e267dadaa64acd9b87bb2a02de42f, type: 2}
+    - {fileID: 11400000, guid: b7cd915a3174d4319a16eb2ee15ebd27, type: 2}
+    - {fileID: 11400000, guid: 445722ac4a68a4716ad015f686cd85d3, type: 2}
+    waveStep: 2
+    spawnInterval: 2
+    totalMonsters: 6
+  - monsters:
+    - {fileID: 11400000, guid: ae2e267dadaa64acd9b87bb2a02de42f, type: 2}
+    - {fileID: 11400000, guid: b7cd915a3174d4319a16eb2ee15ebd27, type: 2}
+    waveStep: 3
+    spawnInterval: 2
+    totalMonsters: 9

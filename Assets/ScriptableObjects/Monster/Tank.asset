@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c512547c2b9c4e9fa96ace15447093a, type: 3}
+  m_Name: Tank
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterData
+  monsterName: Tank
+  monsterPrefab: {fileID: 9024581148646232074, guid: da74051fb4f4b41d8a4f087e7138a191, type: 3}
+  attack: {fileID: 11400000, guid: 68ab87df1cd1f436780f0ab0958a8bae, type: 2}
+  stats: {fileID: 11400000, guid: 5263b4b8e9bc74dc99e527e3e2ce9ccf, type: 2}
+  description: 
