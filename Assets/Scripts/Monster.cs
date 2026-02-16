@@ -3,7 +3,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public MonsterData monsterData;
-    private int _hp;
+    private float _hp;
     
     private SpriteRenderer _sr;
     private Color _originalColor;
@@ -30,6 +30,11 @@ public class Monster : MonoBehaviour
         {
             OnDamaged(other);
         }
+    }
+    
+    public void Init(WaveDetail wave)
+    {
+        _hp = monsterData.stats.maxHp * wave.hpMultiplier;
     }
 
     void OnDamaged(Collider2D other)
