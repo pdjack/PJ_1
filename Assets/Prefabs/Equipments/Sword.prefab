@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8994540669093706916}
   - component: {fileID: 6800880086989571670}
   - component: {fileID: 7923233628991679013}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Equipment
   m_Icon: {fileID: 0}
@@ -141,17 +141,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.409326, y: 0.020095825}
+  m_Offset: {x: 2.4418688, y: 0.01467216}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.9, y: 6.21}
+    pivot: {x: 0.013672831, y: 0.479509}
+    oldSize: {x: 4.96, y: 1.09}
     newSize: {x: 9.9, y: 6.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.95, y: 1.085}
+  m_Size: {x: 4.8849144, y: 0.31482488}
   m_EdgeRadius: 0
 --- !u!50 &7923233628991679013
 Rigidbody2D:

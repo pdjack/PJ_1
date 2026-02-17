@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monster
   monsterData: {fileID: 11400000, guid: b7cd915a3174d4319a16eb2ee15ebd27, type: 2}
+  _hp: 0
 --- !u!61 &-1674645056203110868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +141,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.02883713, y: 0.04410392}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -150,5 +151,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.37915364, y: 0.32147932}
   m_EdgeRadius: 0
