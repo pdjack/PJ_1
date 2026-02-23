@@ -42,6 +42,6 @@ public class PlayerHealth : MonoBehaviour
 
     void OnDie()
     {
-        Debug.Log("죽음");
+        UIManager.Instance.ShowGameOverPanel();
     }
 }
