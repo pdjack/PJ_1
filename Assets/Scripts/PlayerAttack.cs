@@ -15,10 +15,10 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EquipmentStretch();
+        RotateWeaponToMouse();
     }
 
-    void EquipmentStretch()
+    void RotateWeaponToMouse()
     {
         Vector2 mousePosition = Mouse.current.position.ReadValue();
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 10f));

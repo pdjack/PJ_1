@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -7,13 +8,13 @@ public class UIManager : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI waveText;
+    [SerializeField] private Slider hpSlider;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            // UI는 보통 씬마다 새로 구성되므로 DontDestroyOnLoad는 생략하는 경우가 많습니다.
         }
         else
         {
@@ -24,10 +25,17 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         waveText.text = "Wave." + 1;
+        ShowPlayerHpSlider(1);
+
     }
 
     public void UpdateWaveText(int waveCount)
     {
         waveText.text = "Wave." + waveCount.ToString();
+    }
+
+    public void ShowPlayerHpSlider(float hp)
+    {
+        hpSlider.value = hp;
     }
 }

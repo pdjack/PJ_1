@@ -3,21 +3,28 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    //private으로 고치기
     public MonsterData monsterData;
-    [SerializeField]private float _hp;
+    
+    private float _hp;
+    private float _damage;
     
     private SpriteRenderer _sr;
     private Color _originalColor;
 
     private GameObject _player;
+    
+    [SerializeField]private float nextAttackTime;
+    
     void Awake()
     {
         _sr = GetComponent<SpriteRenderer>();
-        _originalColor = _sr.color;
-        
         _player = GameObject.FindGameObjectWithTag("Player");
+        
         _hp = monsterData.stats.maxHp;
-        Debug.Log("monster Awake");
+        _damage = monsterData.attack.damage;
+        
+        _originalColor = _sr.color;
     }
 
     
@@ -28,7 +35,26 @@ public class Monster : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        OnDamaged(other.gameObject);
+        if (other.CompareTag("Equipment"))
+        {
+            OnDamaged(other.gameObject);
+        }
+        
+    }
+
+    public bool CanAttack()
+    {
+        if (Time.time >= nextAttackTime)
+        {
+            nextAttackTime = Time.time + monsterData.attack.attackSpeed;
+            return true;
+        }
+        return false;
+    }
+
+    public float GetDamage()
+    {
+        return _damage;
     }
     
     public void Init(WaveDetail wave)

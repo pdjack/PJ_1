@@ -5,5 +5,5 @@ public class MonAttackData : ScriptableObject
 {
     public int damage;
     public float attackSpeed;
-    public float range;
+    public float range; // 공격 범위
 }

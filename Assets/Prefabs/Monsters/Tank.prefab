@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6383561820451082491}
   - component: {fileID: 7390564051640859777}
   - component: {fileID: 1355425787844529170}
-  - component: {fileID: -1674645056203110868}
+  - component: {fileID: 8411093639067696892}
   m_Layer: 0
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monster
   monsterData: {fileID: 11400000, guid: 445722ac4a68a4716ad015f686cd85d3, type: 2}
-  _hp: 0
---- !u!61 &-1674645056203110868
+  _damage: 0
+--- !u!61 &8411093639067696892
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.008481488, y: -0.02883707}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,5 +151,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.43343535, y: 0.37915364}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
