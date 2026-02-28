@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class MonsterSpawn : MonoBehaviour
 {
-    private GameObject _player;
-    public WaveData wD;
+    [SerializeField]private WaveData wD;
     
     private float _timer;
     private int _spawnIndex = 0;
@@ -20,8 +19,6 @@ public class MonsterSpawn : MonoBehaviour
     
     void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
-
         _waveCount = 1;
     }
 

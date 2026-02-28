@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    //private으로 고치기
-    public MonsterData monsterData;
+    [SerializeField]private MonsterData monsterData;
     
     private float _hp;
     private float _damage;
@@ -64,10 +63,8 @@ public class Monster : MonoBehaviour
 
     void OnDamaged(GameObject equip)
     {
-        int equipDamage = equip.GetComponent<Equipment>().equipmentData.damage;
-        //Debug.Log("_hp" + _hp);
+        int equipDamage = equip.GetComponent<Equipment>().GetDamage();
         _hp -= equipDamage;
-        //Debug.Log("_hp" + _hp);
         
         _sr.color = Color.red;
         Invoke(nameof(ResetColor), 0.1f);

@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public EquipmentData equipment;
+    [SerializeField]private EquipmentData equipment;
     private GameObject _equipment;
     
     void Start()
