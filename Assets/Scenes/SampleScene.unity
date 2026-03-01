@@ -418,7 +418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245af1324ffe4a13bb66e1c2291656e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  wD: {fileID: 11400000, guid: aa15bf5aea1f34606bb2405c755c6677, type: 2}
 --- !u!4 &455320634
 Transform:
   m_ObjectHideFlags: 0
@@ -2909,7 +2908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5c0bbede4c74c2cbf4614ed9eaaf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
-  waves: []
+  wD: {fileID: 11400000, guid: aa15bf5aea1f34606bb2405c755c6677, type: 2}
 --- !u!4 &2136404648
 Transform:
   m_ObjectHideFlags: 0

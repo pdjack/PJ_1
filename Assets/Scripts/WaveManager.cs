@@ -6,7 +6,11 @@ public class WaveManager : MonoBehaviour
     public static WaveManager Instance { get; private set; }
     
     [Header("Wave Settings")]
-    [SerializeField]private List<WaveData> waves;    // 미리 만들어둔 웨이브 데이터 리스트
+    [SerializeField]WaveData wD;    // 미리 만들어둔 웨이브 데이터 리스트
+    
+    private int _waveCount; // 몇 웨이브 인지(UI 표시용)
+    private int _waveIndex; // 리스트 인덱스
+    private WaveDetail _currentWave; // 현재 웨이브
     
     private void Awake()
     {
@@ -24,6 +28,35 @@ public class WaveManager : MonoBehaviour
 
     void Start()
     {
-        
+        _waveCount = 1;
+        _currentWave = wD.waves[_waveIndex];
+    }
+
+    public WaveData GetWaveData()
+    {
+        return wD;
+    }
+
+    public WaveDetail GetCurrentWave()
+    {
+        return _currentWave;
+    }
+
+    // 웨이브++ & 몬스터 스텟 관리
+    public void NextWave()
+    {
+        //Wave
+        _waveCount++;
+        UIManager.Instance.UpdateWaveText(_waveCount);
+
+        // 다음 웨이브 데이터가 있는지 확인 후 인덱스 증가
+        if (_waveIndex + 1 < wD.waves.Count) 
+        {
+            if (_waveCount >= wD.waves[_waveIndex + 1].waveStep)
+            {
+                _waveIndex++;
+                _currentWave = wD.waves[_waveIndex];
+            }
+        }
     }
 }
