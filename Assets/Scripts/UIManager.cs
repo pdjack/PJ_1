@@ -9,8 +9,12 @@ public class UIManager : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI waveText;
+    
     [SerializeField] private Slider hpSlider;
+    
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject cardPanelR;
+    [SerializeField] private GameObject cardPanelL;
 
     void Awake()
     {
@@ -26,23 +30,34 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        //text
         waveText.text = "Wave." + 1;
+        //slider
         ShowPlayerHpSlider(1);
+        //panel
         gameOverPanel.SetActive(false);
+        cardPanelR.SetActive(false);
+        cardPanelL.SetActive(false);
 
     }
 
+    //text
+    
     // text ) waveCount
     public void UpdateWaveText(int waveCount)
     {
         waveText.text = "Wave." + waveCount.ToString();
     }
+    
+    //slider
 
     // slider ) player hp
     public void ShowPlayerHpSlider(float hp)
     {
         hpSlider.value = hp;
     }
+    
+    //panel
     
     // panel ) gameOver
     public void ShowGameOverPanel()
@@ -53,6 +68,8 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
+    
+    //button
     
     // button ) restart
     public void RestartGame()
