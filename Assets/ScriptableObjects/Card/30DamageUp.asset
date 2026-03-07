@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150dfccb6318d468485245b0a091c81c, type: 3}
   m_Name: 30DamageUp
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeCardData
-  cardName: 
-  icon: {fileID: 0}
-  value: 0
+  cardName: 30DamageUp
+  icon: {fileID: 7266764791081144765, guid: 61eebe5f143824196b95a572acd04df5, type: 3}
+  value: 30
   type: 0
-  description: 
+  description: upgrade 30 damage

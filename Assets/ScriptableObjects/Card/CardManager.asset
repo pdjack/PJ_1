@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4ca09814c854647ba6348267abf01c, type: 3}
   m_Name: CardManager
   m_EditorClassIdentifier: Assembly-CSharp::CardManager
-  allCards: []
+  allCards:
+  - {fileID: 11400000, guid: ea2546c0de5644c9b9e64d01d1288e55, type: 2}
+  - {fileID: 11400000, guid: 837f6d5af05374b9a88d9c43085ba270, type: 2}
+  - {fileID: 11400000, guid: 4f428373343864062a279564491b9da6, type: 2}

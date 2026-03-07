@@ -26,4 +26,16 @@ public class CardManager : ScriptableObject
 
         return result;
     }
+    /// <summary>
+    /// 랜덤하게 카드를 뽑고 UIManager를 통해 화면에 표시합니다.
+    /// </summary>
+    public void PickAndShow()
+    {
+        List<UpgradeCardData> pickedCards = GetRandomCards(2);
+        
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ShowUpgradePanel(pickedCards);
+        }
+    }
 }

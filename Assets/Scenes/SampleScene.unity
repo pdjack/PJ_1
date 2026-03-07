@@ -1670,11 +1670,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7908669c9e44ebbb49c65d629b13f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  waveText: {fileID: 1927155752}
-  hpSlider: {fileID: 1601132281}
-  gameOverPanel: {fileID: 885779959}
-  cardPanelR: {fileID: 1919772157}
-  cardPanelL: {fileID: 0}
+  _waveText: {fileID: 1927155752}
+  _hpSlider: {fileID: 1601132281}
+  _gameOverPanel: {fileID: 885779959}
+  _cardUIUp: {fileID: 1919772161}
+  _cardUIDown: {fileID: 1949014214}
 --- !u!4 &1050580550
 Transform:
   m_ObjectHideFlags: 0
@@ -2307,6 +2307,7 @@ GameObject:
   - component: {fileID: 1919772158}
   - component: {fileID: 1919772160}
   - component: {fileID: 1919772159}
+  - component: {fileID: 1919772161}
   m_Layer: 5
   m_Name: CardPanelUp
   m_TagString: Untagged
@@ -2375,6 +2376,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919772157}
   m_CullTransparentMesh: 1
+--- !u!114 &1919772161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919772157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3dae02944fd44847a90da7c12707b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardUI
+  _cardNameText: {fileID: 698865522}
+  _descriptionText: {fileID: 1735898047}
+  _iconImage: {fileID: 750553727}
+  _selectButton: {fileID: 1969610401}
 --- !u!1 &1927155750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,6 +2540,7 @@ GameObject:
   - component: {fileID: 1949014211}
   - component: {fileID: 1949014213}
   - component: {fileID: 1949014212}
+  - component: {fileID: 1949014214}
   m_Layer: 5
   m_Name: CardPanelDown
   m_TagString: Untagged
@@ -2591,6 +2609,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949014210}
   m_CullTransparentMesh: 1
+--- !u!114 &1949014214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949014210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3dae02944fd44847a90da7c12707b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardUI
+  _cardNameText: {fileID: 880069397}
+  _descriptionText: {fileID: 999256583}
+  _iconImage: {fileID: 1336628142}
+  _selectButton: {fileID: 21978481}
 --- !u!1 &1969610399
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,6 +3095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
   wD: {fileID: 11400000, guid: aa15bf5aea1f34606bb2405c755c6677, type: 2}
+  _cardManager: {fileID: 11400000, guid: 80d983cf8b54640c6a380632e93656d2, type: 2}
 --- !u!4 &2136404648
 Transform:
   m_ObjectHideFlags: 0

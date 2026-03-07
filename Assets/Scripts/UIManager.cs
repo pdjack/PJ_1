@@ -18,7 +18,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _gameOverPanel;
 
     [Header("Card Settings")]
-    [SerializeField] private CardManager _cardManager;
     [SerializeField] private CardUI _cardUIUp;
     [SerializeField] private CardUI _cardUIDown;
 
@@ -42,8 +41,8 @@ public class UIManager : MonoBehaviour
         ShowPlayerHpSlider(1);
         //panel
         _gameOverPanel.SetActive(false);
-        if (_cardUIUp != null) _cardUIUp.gameObject.SetActive(false);
-        if (_cardUIDown != null) _cardUIDown.gameObject.SetActive(false);
+        _cardUIUp.gameObject.SetActive(false);
+        _cardUIDown.gameObject.SetActive(false);
 
     }
 
@@ -76,12 +75,9 @@ public class UIManager : MonoBehaviour
     }
 
     // panel ) upgrade
-    public void ShowUpgradePanel()
+    public void ShowUpgradePanel(List<UpgradeCardData> selectedCards)
     {
-        if (_cardManager == null) return;
-
-        // 랜덤하게 2개의 카드 선택
-        List<UpgradeCardData> selectedCards = _cardManager.GetRandomCards(2);
+        if (selectedCards == null) return;
 
         // 카드 UI 셋업
         if (selectedCards.Count >= 1 && _cardUIUp != null)
@@ -105,7 +101,6 @@ public class UIManager : MonoBehaviour
         if (_cardUIDown != null) _cardUIDown.gameObject.SetActive(false);
         Time.timeScale = 1f;
     }
-    
     //button
     
     // button ) restart
