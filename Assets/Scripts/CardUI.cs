@@ -27,9 +27,9 @@ public class CardUI : MonoBehaviour
     {
         _cardData = data;
         
-        if (_cardNameText != null) _cardNameText.text = data.cardName;
-        if (_descriptionText != null) _descriptionText.text = data.description;
-        if (_iconImage != null) _iconImage.sprite = data.icon;
+        _cardNameText.text = data.cardName;
+        _descriptionText.text = data.description;
+        _iconImage.sprite = data.icon;
     }
 
     private void OnCardClicked()
