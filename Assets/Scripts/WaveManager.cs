@@ -48,6 +48,9 @@ public class WaveManager : MonoBehaviour
         //Wave
         _waveCount++;
         UIManager.Instance.UpdateWaveText(_waveCount);
+        
+        // 업그레이드 패널 표시
+        UIManager.Instance.ShowUpgradePanel();
 
         // 다음 웨이브 데이터가 있는지 확인 후 인덱스 증가
         if (_waveIndex + 1 < wD.waves.Count) 

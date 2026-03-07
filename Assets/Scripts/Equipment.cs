@@ -3,9 +3,15 @@ using UnityEngine;
 public class Equipment : MonoBehaviour
 {
     [SerializeField]private EquipmentData equipmentData;
+    private float _bonusDamage;
 
-    public int GetDamage()
+    public void SetBonusDamage(float bonus)
     {
-        return equipmentData.damage;
+        _bonusDamage = bonus;
+    }
+
+    public float GetDamage()
+    {
+        return equipmentData.damage + _bonusDamage;
     }
 }

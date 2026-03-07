@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -7,14 +8,19 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
-    [Header("UI Elements")]
-    [SerializeField] private TextMeshProUGUI waveText;
+    [Header("UI Text")]
+    [SerializeField] private TextMeshProUGUI _waveText;
     
-    [SerializeField] private Slider hpSlider;
+    [Header("UI Slider")]
+    [SerializeField] private Slider _hpSlider;
     
-    [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private GameObject cardPanelR;
-    [SerializeField] private GameObject cardPanelL;
+    [Header("UI Panel")]
+    [SerializeField] private GameObject _gameOverPanel;
+
+    [Header("Card Settings")]
+    [SerializeField] private CardManager _cardManager;
+    [SerializeField] private CardUI _cardUIUp;
+    [SerializeField] private CardUI _cardUIDown;
 
     void Awake()
     {
@@ -31,13 +37,13 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         //text
-        waveText.text = "Wave." + 1;
+        _waveText.text = "Wave." + 1;
         //slider
         ShowPlayerHpSlider(1);
         //panel
-        gameOverPanel.SetActive(false);
-        cardPanelR.SetActive(false);
-        cardPanelL.SetActive(false);
+        _gameOverPanel.SetActive(false);
+        if (_cardUIUp != null) _cardUIUp.gameObject.SetActive(false);
+        if (_cardUIDown != null) _cardUIDown.gameObject.SetActive(false);
 
     }
 
@@ -46,7 +52,7 @@ public class UIManager : MonoBehaviour
     // text ) waveCount
     public void UpdateWaveText(int waveCount)
     {
-        waveText.text = "Wave." + waveCount.ToString();
+        _waveText.text = "Wave." + waveCount.ToString();
     }
     
     //slider
@@ -54,7 +60,7 @@ public class UIManager : MonoBehaviour
     // slider ) player hp
     public void ShowPlayerHpSlider(float hp)
     {
-        hpSlider.value = hp;
+        _hpSlider.value = hp;
     }
     
     //panel
@@ -62,11 +68,42 @@ public class UIManager : MonoBehaviour
     // panel ) gameOver
     public void ShowGameOverPanel()
     {
-        if (gameOverPanel != null)
+        if (_gameOverPanel != null)
         {
-            gameOverPanel.SetActive(true);
+            _gameOverPanel.SetActive(true);
             Time.timeScale = 0f;
         }
+    }
+
+    // panel ) upgrade
+    public void ShowUpgradePanel()
+    {
+        if (_cardManager == null) return;
+
+        // 랜덤하게 2개의 카드 선택
+        List<UpgradeCardData> selectedCards = _cardManager.GetRandomCards(2);
+
+        // 카드 UI 셋업
+        if (selectedCards.Count >= 1 && _cardUIUp != null)
+        {
+            _cardUIUp.Setup(selectedCards[0]);
+            _cardUIUp.gameObject.SetActive(true);
+        }
+        
+        if (selectedCards.Count >= 2 && _cardUIDown != null)
+        {
+            _cardUIDown.Setup(selectedCards[1]);
+            _cardUIDown.gameObject.SetActive(true);
+        }
+
+        Time.timeScale = 0f;
+    }
+
+    public void CloseUpgradePanel()
+    {
+        if (_cardUIUp != null) _cardUIUp.gameObject.SetActive(false);
+        if (_cardUIDown != null) _cardUIDown.gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
     
     //button

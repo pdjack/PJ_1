@@ -63,7 +63,7 @@ public class Monster : MonoBehaviour
 
     void OnDamaged(GameObject equip)
     {
-        int equipDamage = equip.GetComponent<Equipment>().GetDamage();
+        float equipDamage = equip.GetComponent<Equipment>().GetDamage();
         _hp -= equipDamage;
         
         _sr.color = Color.red;
