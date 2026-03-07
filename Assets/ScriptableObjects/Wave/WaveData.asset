@@ -18,9 +18,7 @@ MonoBehaviour:
     spawnInterval: 2
     monsterList:
     - monster: {fileID: 11400000, guid: ae2e267dadaa64acd9b87bb2a02de42f, type: 2}
-      count: 5
-    - monster: {fileID: 11400000, guid: b7cd915a3174d4319a16eb2ee15ebd27, type: 2}
-      count: 5
+      count: 2
     damageMultiplier: 1
     hpMultiplier: 1
     speedMultiplier: 1
@@ -28,7 +26,7 @@ MonoBehaviour:
     waveStep: 2
     spawnInterval: 2
     monsterList:
-    - monster: {fileID: 11400000, guid: ae2e267dadaa64acd9b87bb2a02de42f, type: 2}
+    - monster: {fileID: 11400000, guid: b7cd915a3174d4319a16eb2ee15ebd27, type: 2}
       count: 5
     damageMultiplier: 1
     hpMultiplier: 1

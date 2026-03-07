@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum UpgradeType { AttackDamage, MoveSpeed, ProjectileCount }
+public enum UpgradeType { AttackDamage, EquipCount}
 
 [CreateAssetMenu(fileName = "New Card Data", menuName = "ScriptableObjects/UpgradeCard/CardData")]
 public class UpgradeCardData : ScriptableObject

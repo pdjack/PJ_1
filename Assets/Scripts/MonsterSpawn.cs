@@ -8,15 +8,13 @@ public class MonsterSpawn : MonoBehaviour
     private float _timer;
     private int _monsterCount = 0;
     private float _spawnInterval;
-
+    private WaveDetail _currentWave;
+    
     void Update()
     {
         _timer += Time.deltaTime;
-        if (WaveManager.Instance.GetCurrentWave() == null)
-        {
-            Debug.Log("currentWave is null");
-        }
-        if (_monsterCount <= WaveManager.Instance.GetCurrentWave().GetTotalCount() && _timer > _spawnInterval)
+        _currentWave = WaveManager.Instance.GetCurrentWave();
+        if (_monsterCount <= _currentWave.GetTotalCount() && _timer > _spawnInterval)
         {
             SpawnRandomMonster();
             _timer = 0;
@@ -27,22 +25,18 @@ public class MonsterSpawn : MonoBehaviour
     void SpawnRandomMonster()
     {
         // 무작위 선택 및 소환
-        int spawnIndex = Random.Range(0, WaveManager.Instance.GetCurrentWave().monsterList.Count);
-        if (WaveManager.Instance.GetCurrentWave().monsterList == null)
-        {
-            Debug.Log("monList is null");
-        }
+        int spawnIndex = Random.Range(0, _currentWave.monsterList.Count);
         int randomX = Random.Range(4, 9);
         int randomY = Random.Range(7, 9);
-        GameObject monster = Instantiate(WaveManager.Instance.GetCurrentWave().monsterList[spawnIndex].monster.monsterPrefab, new Vector2(randomX, randomY), Quaternion.identity);
+        GameObject monster = Instantiate(_currentWave.monsterList[spawnIndex].monster.monsterPrefab, new Vector2(randomX, randomY), Quaternion.identity);
         _monsterCount++;
         
         // 몬스터 소환 주기 & 몬스터 스텟 설정
-        _spawnInterval = WaveManager.Instance.GetCurrentWave().spawnInterval;
-        monster.GetComponent<Monster>().Init(WaveManager.Instance.GetCurrentWave());
+        _spawnInterval = _currentWave.spawnInterval;
+        monster.GetComponent<Monster>().Init(_currentWave);
         
         // 소환 완료 후 웨이브 체크
-        if (_monsterCount >= WaveManager.Instance.GetCurrentWave().GetTotalCount())
+        if (_monsterCount >= _currentWave.GetTotalCount())
         {
             _monsterCount = 0;
             WaveManager.Instance.NextWave();
