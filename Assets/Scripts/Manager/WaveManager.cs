@@ -43,7 +43,7 @@ public class WaveManager : MonoBehaviour
         return _currentWave;
     }
 
-    // 웨이브++ & 몬스터 스텟 관리
+    // 다음 웨이브가 될 때
     public void NextWave()
     {
         //Wave
