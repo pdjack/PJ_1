@@ -20,9 +20,6 @@ public class CardUI : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 전달받은 카드 데이터로 UI를 업데이트합니다.
-    /// </summary>
     public void Setup(UpgradeCardData data)
     {
         _cardData = data;
@@ -34,12 +31,8 @@ public class CardUI : MonoBehaviour
 
     private void OnCardClicked()
     {
-        // 플레이어의 PlayerAttack 컴포넌트를 찾아 업그레이드 적용
-        PlayerAttack playerAttack = FindFirstObjectByType<PlayerAttack>();
-        if (playerAttack != null)
-        {
-            playerAttack.ApplyUpgrade(_cardData);
-        }
+        // bonus value
+        PlayerStat.Instance.ApplyUpgrade(_cardData);
 
         // 패널을 닫고 시간을 재개
         UIManager.Instance.CloseUpgradePanel();

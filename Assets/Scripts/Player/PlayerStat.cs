@@ -5,14 +5,16 @@ public class PlayerStat : MonoBehaviour
     public static PlayerStat Instance { get; private set; }
 
     [Header("HP Settings")]
-    public float maxHp = 100f;
-    public float currentHp;
+    //private 으로 바꾸기
+    private float maxHp = 100f;
+    [SerializeField]private float currentHp;
 
-    [Header("Damage Settings")]
-    public float baseDamage = 10f;
-    public float bonusDamage = 0f;
-
-    public float TotalDamage => baseDamage + bonusDamage;
+    [Header("Damage Settings")] 
+    [SerializeField]private EquipmentData currentEquipment;
+    
+    //private 으로 바꾸기
+    [SerializeField]private float _damage = 0f;
+    [SerializeField]private float _bonusDamage = 0f;
 
     private void Awake()
     {
@@ -29,4 +31,38 @@ public class PlayerStat : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        _damage = currentEquipment.damage;
+    }
+
+    public EquipmentData GetCurrentEquip()
+    {
+        return currentEquipment;
+    }
+    
+    private void SetBonusDamage(float bonus)
+    {
+        _bonusDamage = bonus;
+    }
+    
+    public void ApplyUpgrade(UpgradeCardData data)
+    {
+        switch (data.type)
+        {
+            case UpgradeType.AttackDamage:
+                Debug.Log(_bonusDamage += data.value);
+                SetBonusDamage(_bonusDamage += data.value);
+                //_bonusDamage += data.value;
+                break;
+        }
+    }
+    
+    public float GetDamage()
+    {
+        return (_damage + _bonusDamage);
+    }
+
+    
 }

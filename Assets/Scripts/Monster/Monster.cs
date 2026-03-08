@@ -5,7 +5,8 @@ public class Monster : MonoBehaviour
 {
     [SerializeField]private MonsterData monsterData;
     
-    private float _hp;
+    // private으로 고치기
+    [SerializeField]private float _hp;
     private float _damage;
     
     private SpriteRenderer _sr;
@@ -63,8 +64,9 @@ public class Monster : MonoBehaviour
 
     void OnDamaged(GameObject equip)
     {
-        float equipDamage = equip.GetComponent<Equipment>().GetDamage();
-        _hp -= equipDamage;
+        float damage = PlayerStat.Instance.GetDamage();
+        Debug.Log("damage : " + damage);
+        _hp -= damage;
         
         _sr.color = Color.red;
         Invoke(nameof(ResetColor), 0.1f);
@@ -104,6 +106,5 @@ public class Monster : MonoBehaviour
         }
         
     }
-    
     
 }

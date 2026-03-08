@@ -2117,6 +2117,7 @@ GameObject:
   - component: {fileID: 1879287088}
   - component: {fileID: 1879287087}
   - component: {fileID: 1879287089}
+  - component: {fileID: 1879287091}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2210,7 +2211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334cf964fc32f40fda0858d4c8c4282f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  equipment: {fileID: 11400000, guid: 897f2d0add75a43f9bd9f7a7494a12c9, type: 2}
 --- !u!61 &1879287088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2296,6 +2296,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1879287091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879287084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c4ee080870d450fb985a2d5efe15f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStat
+  currentHp: 0
+  currentEquipment: {fileID: 11400000, guid: 897f2d0add75a43f9bd9f7a7494a12c9, type: 2}
+  _damage: 0
+  _bonusDamage: 0
 --- !u!1 &1919772157
 GameObject:
   m_ObjectHideFlags: 0
