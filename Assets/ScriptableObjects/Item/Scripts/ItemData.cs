@@ -2,8 +2,7 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Equipment,
-    PassiveCard
+    Equipment
 }
 
 public abstract class ItemData : ScriptableObject

@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334cf964fc32f40fda0858d4c8c4282f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  equipment: {fileID: 11400000, guid: 8adabce1f27cd487cab0a65210fb8f10, type: 2}
+  equipment: {fileID: 11400000, guid: 897f2d0add75a43f9bd9f7a7494a12c9, type: 2}
 --- !u!61 &1879287088
 BoxCollider2D:
   m_ObjectHideFlags: 0
