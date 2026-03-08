@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float _maxHp = 100f;
-    private float _hp;
-    
     void Start()
     {
-        _hp = _maxHp;
+        
     }
     
     void Update()
@@ -31,10 +28,15 @@ public class PlayerHealth : MonoBehaviour
 
     void OnDamaged(float damage)
     {
-        _hp -= damage;
-        UIManager.Instance.ShowPlayerHpSlider(_hp * 0.01f);
+        float currentHp = PlayerStat.Instance.Hp;
+        float maxHp = PlayerStat.Instance.MaxHp;
+        
+        currentHp -= damage;
+        PlayerStat.Instance.SetHp(currentHp);
+        
+        UIManager.Instance.ShowPlayerHpSlider(currentHp / maxHp);
 
-        if (_hp <= 0)
+        if (currentHp <= 0)
         {
             OnDie();
         }
