@@ -12,9 +12,8 @@ public class PlayerStat : MonoBehaviour
     [Header("Damage Settings")] 
     [SerializeField]private EquipmentData currentEquipment;
     
-    //private 으로 바꾸기
-    [SerializeField]private float _damage = 0f;
-    [SerializeField]private float _bonusDamage = 0f;
+    private float _damage = 0f;
+    private float _bonusDamage = 0f;
 
     private void Awake()
     {
@@ -52,7 +51,6 @@ public class PlayerStat : MonoBehaviour
         switch (data.type)
         {
             case UpgradeType.AttackDamage:
-                Debug.Log(_bonusDamage += data.value);
                 SetBonusDamage(_bonusDamage += data.value);
                 //_bonusDamage += data.value;
                 break;

@@ -5,8 +5,7 @@ public class Monster : MonoBehaviour
 {
     [SerializeField]private MonsterData monsterData;
     
-    // private으로 고치기
-    [SerializeField]private float _hp;
+    private float _hp;
     private float _damage;
     
     private SpriteRenderer _sr;

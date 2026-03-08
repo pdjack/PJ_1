@@ -33,7 +33,7 @@ public class CardUI : MonoBehaviour
     {
         // bonus value
         PlayerStat.Instance.ApplyUpgrade(_cardData);
-
+        
         // 패널을 닫고 시간을 재개
         UIManager.Instance.CloseUpgradePanel();
     }
