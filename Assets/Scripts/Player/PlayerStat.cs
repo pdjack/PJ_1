@@ -7,6 +7,7 @@ public class PlayerStat : MonoBehaviour
     // private 고치기
     [Header("HP Settings")]
     [SerializeField] private float _maxHp = 100f;
+    [SerializeField] private float _bonusHp = 0f;
     [SerializeField] private float _hp;
 
     public float MaxHp => _maxHp;

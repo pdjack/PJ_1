@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum UpgradeType { AttackDamage, EquipCount }
+public enum UpgradeType { AttackDamage, MaxHpUp }
 public enum CardGrade { Common, Rare, Epic, Legendary }
 
 [CreateAssetMenu(fileName = "New Card Data", menuName = "ScriptableObjects/UpgradeCard/CardData")]

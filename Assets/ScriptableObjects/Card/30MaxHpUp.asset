@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 150dfccb6318d468485245b0a091c81c, type: 3}
-  m_Name: 40DamageUp
+  m_Name: 30MaxHpUp
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeCardData
-  cardName: 40DamageUp
+  cardName: 30MaxHpUp
   icon: {fileID: 7266764791081144765, guid: 61eebe5f143824196b95a572acd04df5, type: 3}
-  grade: 2
-  value: 40
+  grade: 1
+  value: 30
   type: 0
-  description: upgrade 40 damage
+  description: upgrade 30 damage

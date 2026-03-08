@@ -16,3 +16,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ea2546c0de5644c9b9e64d01d1288e55, type: 2}
   - {fileID: 11400000, guid: 837f6d5af05374b9a88d9c43085ba270, type: 2}
   - {fileID: 11400000, guid: 4f428373343864062a279564491b9da6, type: 2}
+  probabilities:
+    common: 70
+    rare: 20
+    epic: 8
+    legendary: 2
