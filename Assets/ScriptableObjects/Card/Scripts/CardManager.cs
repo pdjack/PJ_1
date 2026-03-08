@@ -1,24 +1,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct GradeWeights
+{
+    public float common;
+    public float rare;
+    public float epic;
+    public float legendary;
+
+    public GradeWeights(float common, float rare, float epic, float legendary)
+    {
+        this.common = common;
+        this.rare = rare;
+        this.epic = epic;
+        this.legendary = legendary;
+    }
+}
+
 [CreateAssetMenu(fileName = "CardManager", menuName = "ScriptableObjects/UpgradeCard/CardManager")]
 public class CardManager : ScriptableObject
 {
     [Header("All Upgrade Cards")]
     public List<UpgradeCardData> allCards = new List<UpgradeCardData>();
 
-    /// <summary>
-    /// 무작위로 n개의 중복되지 않는 카드를 선택하여 반환합니다.
-    /// </summary>
+    [Header("Grade Probabilities (Total should be 100)")]
+    public GradeWeights probabilities = new GradeWeights(70, 20, 8, 2);
+
     public List<UpgradeCardData> GetRandomCards(int count)
     {
         List<UpgradeCardData> result = new List<UpgradeCardData>();
         List<UpgradeCardData> tempPool = new List<UpgradeCardData>(allCards);
 
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < tempPool.Count; i++)
         {
-            if (tempPool.Count == 0) break;
-
             int randomIndex = Random.Range(0, tempPool.Count);
             result.Add(tempPool[randomIndex]);
             tempPool.RemoveAt(randomIndex);
@@ -26,9 +41,7 @@ public class CardManager : ScriptableObject
 
         return result;
     }
-    /// <summary>
-    /// 랜덤하게 카드를 뽑고 UIManager를 통해 화면에 표시합니다.
-    /// </summary>
+    
     public void PickAndShow()
     {
         List<UpgradeCardData> pickedCards = GetRandomCards(2);
