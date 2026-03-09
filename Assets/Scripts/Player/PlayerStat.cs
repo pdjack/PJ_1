@@ -16,8 +16,8 @@ public class PlayerStat : MonoBehaviour
     [Header("Damage Settings")] 
     [SerializeField]private EquipmentData currentEquipment;
     
-    private float _damage = 0f;
-    private float _bonusDamage = 0f;
+    [SerializeField]private float _damage = 0f;
+    [SerializeField]private float _bonusDamage = 0f;
 
     private void Awake()
     {
@@ -37,7 +37,14 @@ public class PlayerStat : MonoBehaviour
 
     public void SetHp(float value)
     {
-        _hp = Mathf.Clamp(value, 0f, _maxHp);
+        _hp = Mathf.Clamp(value, 0f, MaxHp);
+    }
+
+    public void AddMaxHp(float amount)
+    {
+        _maxHp += amount;
+        _hp += amount;
+        Debug.Log($"[PlayerStat] MaxHP Up: +{amount} (Current MaxHP: {_maxHp})");
     }
 
     private void Start()
@@ -50,20 +57,10 @@ public class PlayerStat : MonoBehaviour
         return currentEquipment;
     }
     
-    private void SetBonusDamage(float bonus)
+    public void AddBonusDamage(float amount)
     {
-        _bonusDamage = bonus;
-    }
-    
-    public void ApplyUpgrade(UpgradeCardData data)
-    {
-        switch (data.type)
-        {
-            case UpgradeType.AttackDamage:
-                SetBonusDamage(_bonusDamage += data.value);
-                //_bonusDamage += data.value;
-                break;
-        }
+        _bonusDamage += amount;
+        Debug.Log($"[PlayerStat] Bonus Damage Up: +{amount} (Total Bonus: {_bonusDamage})");
     }
     
     public float GetDamage()

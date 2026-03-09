@@ -31,8 +31,11 @@ public class CardUI : MonoBehaviour
 
     private void OnCardClicked()
     {
-        // bonus value
-        PlayerStat.Instance.ApplyUpgrade(_cardData);
+        // Manager를 통해 강화 적용
+        if (UpgradeManager.Instance != null)
+        {
+            UpgradeManager.Instance.ApplyUpgrade(_cardData);
+        }
         
         // 패널을 닫고 시간을 재개
         UIManager.Instance.CloseUpgradePanel();
