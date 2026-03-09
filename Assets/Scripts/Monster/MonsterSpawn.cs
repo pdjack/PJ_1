@@ -26,8 +26,8 @@ public class MonsterSpawn : MonoBehaviour
     {
         // 무작위 선택 및 소환
         int spawnIndex = Random.Range(0, _currentWave.monsterList.Count);
-        int randomX = Random.Range(4, 9);
-        int randomY = Random.Range(7, 9);
+        int randomX = Random.Range(4, 9) * (Random.Range(0, 2) == 0 ? 1 : -1);
+        int randomY = Random.Range(7, 9) * (Random.Range(0, 2) == 0 ? 1 : -1);
         GameObject monster = Instantiate(_currentWave.monsterList[spawnIndex].monster.monsterPrefab, new Vector2(randomX, randomY), Quaternion.identity);
         _monsterCount++;
         
