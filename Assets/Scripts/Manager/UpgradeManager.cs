@@ -19,7 +19,6 @@ public class UpgradeManager : MonoBehaviour
 
     public void ApplyUpgrade(UpgradeCardData data)
     {
-        Debug.Log("Applying upgrade");
         if (data == null) return;
 
         switch (data.type)
