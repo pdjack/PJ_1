@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 30MaxHpUp
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeCardData
   cardName: 30MaxHpUp
-  icon: {fileID: 7266764791081144765, guid: 61eebe5f143824196b95a572acd04df5, type: 3}
-  grade: 1
+  icon: {fileID: -5984716870750939460, guid: 443e11fc0830d49e293fcca1ac581092, type: 3}
+  grade: 2
   value: 30
-  type: 0
+  type: 1
   description: upgrade 30 damage

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 20MaxHpUp
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeCardData
   cardName: 20MaxHpUp
-  icon: {fileID: 7036785086525057859, guid: b57726cb8bf204187aff31ec07ddfd83, type: 3}
+  icon: {fileID: -5675810510391226634, guid: 79273d6dc9cd94d2faeb358258f02ae2, type: 3}
   grade: 2
   value: 20
   type: 1
