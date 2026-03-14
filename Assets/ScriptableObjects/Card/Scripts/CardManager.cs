@@ -44,6 +44,9 @@ public class CardManager : ScriptableObject
     {
         List<UpgradeCardData> result = new List<UpgradeCardData>();
         List<UpgradeCardData> tempAllCards = new List<UpgradeCardData>(allCards);
+        
+        // 추가: Inspector에서 할당되지 않았거나 스크립트가 변경되어 누락된(null) 카드 데이터를 방어합니다.
+        tempAllCards.RemoveAll(card => card == null);
 
         for (int i = 0; i < count; i++)
         {
@@ -86,9 +89,17 @@ public class CardManager : ScriptableObject
     {
         List<UpgradeCardData> pickedCards = GetRandomCards(2);
         
-        if (UIManager.Instance != null)
+        // 카드가 1장이라도 뽑혔을 때만 올바르게 패널을 띄웁니다. 카드를 하나도 못뽑은 채로 UI를 띄우면 빈 창만 나오고 시간이 멈춥니다.
+        if (pickedCards != null && pickedCards.Count > 0)
         {
-            UIManager.Instance.ShowUpgradePanel(pickedCards);
+            if (UIManager.Instance != null)
+            {
+                UIManager.Instance.ShowUpgradePanel(pickedCards);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("CardManager: 뽑을 수 있는 유효한 카드(UpgradeCardData)가 하나도 설정되어 있지 않아 업그레이드 패널을 띄우지 못했습니다.");
         }
     }
 }

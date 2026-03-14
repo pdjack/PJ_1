@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: CardManager
   m_EditorClassIdentifier: Assembly-CSharp::CardManager
   allCards:
-  - {fileID: 11400000, guid: ea2546c0de5644c9b9e64d01d1288e55, type: 2}
-  - {fileID: 11400000, guid: 837f6d5af05374b9a88d9c43085ba270, type: 2}
-  - {fileID: 11400000, guid: 4f428373343864062a279564491b9da6, type: 2}
-  - {fileID: 11400000, guid: 8e39e494f6944444ca877895b141e17f, type: 2}
-  - {fileID: 11400000, guid: 7fdc9f4f4f98446b49a62742101ec826, type: 2}
-  - {fileID: 11400000, guid: c6a3d1f6bbe3c4a0cb7d68d866e8b8ca, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   probabilities:
     common: 70
     rare: 20

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72f020155609344848c697d28257e661, type: 3}
-  m_Name: 10DamageUp
+  m_Name: 10DamageUp 2
   m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeCardData
-  cardName: 10DamageUp
-  icon: {fileID: 4114692140137591232, guid: d99ea9a91b7ec4576a430d6bf5cbcd6d, type: 3}
+  cardName: 20DamageUp
+  icon: {fileID: 7036785086525057859, guid: b57726cb8bf204187aff31ec07ddfd83, type: 3}
   grade: 0
-  description: 10DamageUp
+  description: 20DamageUp
   _statType: 0
-  _value: 10
+  _value: 20

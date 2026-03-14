@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 150dfccb6318d468485245b0a091c81c, type: 3}
-  m_Name: 20DamageUp
-  m_EditorClassIdentifier: Assembly-CSharp::UpgradeCardData
-  cardName: 20Damage Up
+  m_Script: {fileID: 11500000, guid: 72f020155609344848c697d28257e661, type: 3}
+  m_Name: 10DamageUp 1
+  m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeCardData
+  cardName: 20DamageUp
   icon: {fileID: 7036785086525057859, guid: b57726cb8bf204187aff31ec07ddfd83, type: 3}
-  value: 20
-  type: 0
-  description: upgrade 20 damage
+  grade: 0
+  description: 20DamageUp
+  _statType: 0
+  _value: 20

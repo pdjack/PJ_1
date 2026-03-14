@@ -21,14 +21,14 @@ public class UpgradeManager : MonoBehaviour
     {
         if (data == null) return;
 
-        switch (data.type)
+        if (PlayerStat.Instance != null)
         {
-            case UpgradeType.AttackDamage:
-                PlayerStat.Instance.AddBonusDamage(data.value);
-                break;
-            case UpgradeType.MaxHpUp:
-                PlayerStat.Instance.AddMaxHp(data.value);
-                break;
+            // OCP를 준수하여, 각 카드가 자신의 로직을 실행하도록 위임합니다.
+            data.ApplyEffect(PlayerStat.Instance.gameObject);
+        }
+        else
+        {
+            Debug.LogWarning("ApplyUpgrade: PlayerStat.Instance가 존재하지 않습니다.");
         }
     }
 }
