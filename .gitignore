@@ -99,7 +99,7 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
 # Agent Environment
-.env
+Environment/.env
 .tmp/
 credentials.json
 token.json

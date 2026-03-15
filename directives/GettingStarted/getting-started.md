@@ -6,22 +6,22 @@
 
 ## 1단계: 프로젝트의 전체 모습 파악하기
 가장 먼저 이 프로젝트가 무엇이고, 어떤 기능들이 있는지 살펴봅니다. 지도를 보는 것과 같죠.
-- 📌 **파일 보기**: `directives/Architecture/PJ1_전체_시스템_설계_및_기능_구조도.md`
+- 📌 **파일 보기**: `Directives/Architecture/architecture.md`
 
 ## 2단계: 개발할 때의 약속 확인하기
 코드를 작성하거나 파일을 만들 때 지켜야 할 규칙들입니다. 이 규칙을 지켜야 나중에 다른 사람이나 AI와 함께 작업하기가 훨씬 편합니다.
-- 📌 **파일 보기**: `directives/Guidelines/유니티_코딩_스타일_및_개발_기본_규칙.md`
+- 📌 **파일 보기**: `Directives/Guidelines/coding-conventions.md`
 
 ## 3단계: 조금 더 깊이 있게 알아보기
 게임이 느려지지 않게 하고, 더 멋진 구조로 짜는 고급 기술들입니다. 조금 익숙해지면 읽어보세요.
-- 📌 **파일 보기**: `directives/Guidelines/유니티_성능_최적화_및_고급_프로그래밍_지침.md`
+- 📌 **파일 보기**: `Directives/Guidelines/performance.md`
 
 ## 4단계: AI와 함께 작업하는 방법
 이 프로젝트의 똑똑한 도우미인 AI 에이전트가 어떻게 생각하고 행동하는지 알 수 있습니다.
-- 📌 **파일 보기**: `directives/Agent/AI_에이전트_작업_환경_및_운영_원칙.md`
+- 📌 **파일 보기**: `Directives/Agent/agent-rules.md`
 
 ---
 
 ### 💡 팁
-- 모든 파일은 **`directives/`** 폴더 안에 잘 정리되어 있습니다.
+- 모든 파일은 **`Directives/`** 폴더 안에 잘 정리되어 있습니다.
 - 새로운 아이디어가 있거나 기능을 추가하고 싶을 때는 언제든 말씀해 주세요! 🚀
