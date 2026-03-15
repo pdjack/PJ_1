@@ -28,6 +28,9 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        // 게임이 일시정지 상태(Time.timeScale == 0)인 경우 실행 중단
+        if (Time.timeScale == 0f) return;
+
         // 어지러움 상태인 경우 회전 및 공격 불가
         if (_isDizzy) return;
 
