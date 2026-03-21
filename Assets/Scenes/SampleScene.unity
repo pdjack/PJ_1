@@ -2255,6 +2255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334cf964fc32f40fda0858d4c8c4282f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  _accumulatedRotation: 0
+  _lastAngle: 0
+  _isDizzy: 0
 --- !u!61 &1879287088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2352,12 +2355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c4ee080870d450fb985a2d5efe15f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStat
-  _maxHp: 100
-  _bonusHp: 0
-  _hp: 0
   currentEquipment: {fileID: 11400000, guid: 897f2d0add75a43f9bd9f7a7494a12c9, type: 2}
-  _damage: 0
-  _bonusDamage: 0
 --- !u!1 &1919772157
 GameObject:
   m_ObjectHideFlags: 0

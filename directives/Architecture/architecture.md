@@ -22,10 +22,20 @@
 - **업그레이드 적용(UpgradeManager)**: 플레이어가 고른 카드의 효과를 실제 플레이어의 능력치에 반영해 줍니다.
 - **확장성**: 새로운 기능의 카드를 만들 때 기존 코드를 건드리지 않고 새로 추가만 하면 되도록 설계되었습니다.
 
+### 2.4 AI 연동 및 에디터 자동화 (Unity MCP)
+- **Unity MCP (Model Context Protocol)**: AI 에이전트(Antigravity)가 Unity 에디터와 직접 소통하기 위한 고속 데이터 통로(Bridge)입니다.
+- **On-demand 데이터 쿼리**: 모든 데이터를 읽는 대신, AI가 필요한 정보(예: 특정 오브젝트 상태)만 실시간으로 요청하여 분석하므로 토큰 사용이 효율적이고 정확합니다.
+- **실시간 제어**: AI가 에디터 내부의 GameObject 검색, 수정, 삭제, 컴포넌트 밸런싱 등을 직접 수행하여 개발 생산성을 극대화합니다.
+
 ## 3. 프로그램 간의 상호작용 (어떻게 서로 부르나요?)
 
 ```mermaid
 graph TD
+    subgraph "AI 개발 계층 (AI & Automation)"
+        AA[AI Agent]
+        MCP[Unity MCP Server]
+    end
+
     subgraph "관리용 (Core Managers)"
         WM[웨이브 관리자]
         UM[UI 화면 관리자]
@@ -36,6 +46,12 @@ graph TD
         MS[몬스터 소환기]
         PS[플레이어 상태창]
     end
+
+    %% AI 연동 흐름
+    AA ---->|명령 전달| MCP
+    MCP ---->|Direct API 제어| WM
+    MCP ---->|Assets/Scene 조작| MS
+    MCP ---->|Components 수정| PS
 
     MS -->|웨이브 정보 확인| WM
     WM -->|화면 업데이트 명령| UM
