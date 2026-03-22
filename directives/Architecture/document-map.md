@@ -15,6 +15,7 @@
 | **콘텐츠 명세** | [content_spec.md](../Planning/content_spec.md) | **중** | 신규 무기/병과 추가, 구현 상태(✅) 변경 시 | 상세 기획 수치 및 콘텐츠 진척도 관리 |
 | **데이터 구조** | [data-structures.md](./data-structures.md) | **중** | ScriptableObject 생성 및 필드 수정 시 | 코드와 기획 간의 데이터 매핑 및 계층 정의 |
 | **상세 기획서** | [proposal.md](../Planning/proposal.md) | **저** | 마일스톤 단계 완료 및 핵심 컨셉 변경 시 | 프로젝트 비전, 핵심 루프 및 전체 마일스톤 |
+| **플랜 작성 지침** | [plan.md](../Planning/plan.md) | **저** | 플랜 작성 방식이 변경될 때 | AI 에이전트가 플랜을 수립하는 표준 절차 정의 |
 
 ---
 
@@ -25,6 +26,7 @@
 - **[architecture.md](./architecture.md)**: 모든 문서의 최상위 허브 역할을 수행합니다.
 - **[content_spec.md](../Planning/content_spec.md)** ↔ **[data-structures.md](./data-structures.md)**: 기획 사양의 수치가 데이터 구조(SO)에 어떻게 반영되는지 실시간으로 동기화되어야 합니다.
 - **[agent-rules.md](../Agent/agent-rules.md)**: 모든 문서를 관리하고 코드를 작성하는 AI 에이전트의 행동 지침을 정의합니다.
+- **[plan.md](../Planning/plan.md)**: 작업 요청 수신 시 AI 에이전트가 플랜을 수립하는 절차와 형식을 정의합니다.
 
 ---
 
