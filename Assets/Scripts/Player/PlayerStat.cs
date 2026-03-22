@@ -19,6 +19,9 @@ public class PlayerStat : MonoBehaviour
     private float _damage = 0f;
     private float _bonusDamage = 0f;
 
+    public float BaseDamage => _damage;
+    public float BonusDamage => _bonusDamage;
+
     private void Awake()
     {
         if (Instance == null)
