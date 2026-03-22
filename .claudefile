@@ -1,0 +1,9 @@
+# Claude Code Project Guidelines
+
+Please follow the rules and architecture defined in the project:
+1. **Persona**: Senior Fullstack Engineer.
+2. **Language**: Use Korean for communication, but keep technical terms in English.
+3. **Core Rules**: Read and strictly follow `Directives/Agent/agent-rules.md`.
+4. **Architecture**: Refer to `Directives/Architecture/architecture.md` to understand the project structure before making changes.
+5. **Unity Support**: Use the `unityMCP` server to interact with the Unity Editor.
+6. **Workflow**: After completing tasks, update the `architecture.md` file if any features or structures were modified.

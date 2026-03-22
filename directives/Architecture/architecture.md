@@ -23,7 +23,7 @@
 - **확장성**: 새로운 기능의 카드를 만들 때 기존 코드를 건드리지 않고 새로 추가만 하면 되도록 설계되었습니다.
 
 ### 2.4 AI 연동 및 에디터 자동화 (Unity MCP)
-- **Unity MCP (Model Context Protocol)**: AI 에이전트(Antigravity)가 Unity 에디터와 직접 소통하기 위한 고속 데이터 통로(Bridge)입니다.
+- **Unity MCP (Model Context Protocol)**: AI 에이전트(Antigravity, Claude Code 등)가 Unity 에디터와 직접 소통하기 위한 고속 데이터 통로(Bridge)입니다.
 - **On-demand 데이터 쿼리**: 모든 데이터를 읽는 대신, AI가 필요한 정보(예: 특정 오브젝트 상태)만 실시간으로 요청하여 분석하므로 토큰 사용이 효율적이고 정확합니다.
 - **실시간 제어**: AI가 에디터 내부의 GameObject 검색, 수정, 삭제, 컴포넌트 밸런싱 등을 직접 수행하여 개발 생산성을 극대화합니다.
 
@@ -32,7 +32,7 @@
 ```mermaid
 graph TD
     subgraph "AI 개발 계층 (AI & Automation)"
-        AA[AI Agent]
+        AA[Development Agents]
         MCP[Unity MCP Server]
     end
 
@@ -71,3 +71,9 @@ graph TD
 ## 5. 앞으로 완성해야 할 부분 (발전 방향)
 - **능력치 시스템 고도화**: 단순히 더하는 방식에서 복합적인 수식으로 계산되게 발전시킬 수 있습니다.
 - **공통 풀링 시스템**: 무기 효과나 몬스터 소환 시마다 만들어내는 것 대신, 쓰고 다시 가져오는 방식으로 바꾸는 게 좋습니다.
+
+## 6. 멀티 에이전트 협업 규칙 (Multi-Agent Rules)
+여러 AI 에이전트가 이 프로젝트를 수정할 때 지켜야 할 원칙입니다.
+- **문서 동기화**: 작업 완료 후 반드시 `architecture.md`를 최신 상태로 업데이트하여 다른 에이전트가 맥락을 잃지 않게 합니다.
+- **작업 기록**: 주요 기능 변경 시 `SESSION_LOG.md` 또는 커밋 메시지에 상세 내용을 기록합니다.
+- **규칙 준수**: `Directives/Agent/agent-rules.md`에 정의된 페르소나와 작업 방식을 일관되게 적용합니다.
