@@ -6,6 +6,7 @@
 
 | 날짜 | 에이전트 | 작업 내용 | 비고 |
 | :--- | :--- | :--- | :--- |
+| 2026-03-22 | Antigravity | Unity MCP 운영 효율화 및 토큰 최적화 플랜 완료 | [Step 1-3] 지침서 업데이트, `Execution/` 자산화, `PJ1_AutomationTools` 구축 및 검증 완료 |
 | 2026-03-22 | Antigravity | MD 문서 체계 전면 동기화 (고아 파일 해소, 코드↔기획 매핑 추가, 용어 통일) | `architecture.md` 허브화, `content_spec.md` WeaponData→EquipmentData, `proposal.md` 상호참조, `getting-started.md` 4단계 추가, `coding-conventions.md` frontmatter 수정 |
 | 2026-03-22 | Antigravity | 멀티 에이전트 협업 환경 구축 (Phase 1-4 완료) | `architecture.md`, `agent-rules.md` 업데이트, `.claudefile` 생성 |
 

@@ -16,6 +16,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c936210b46a36452ca9cd2a0ce54ffa3, type: 2}
   - {fileID: 11400000, guid: 89a078a95f0cb48e8b753e816979d777, type: 2}
   - {fileID: 11400000, guid: 29c4498c1a3124860aea62ce9eeccef4, type: 2}
+  - {fileID: 11400000, guid: 8838b702ec0b24fc09b2f7e5b3864d97, type: 2}
+  - {fileID: 11400000, guid: 393c2ba3e8c9e49b9a03cbe046456a96, type: 2}
+  - {fileID: 11400000, guid: a48ec49cd08544485aea347aaffa35d7, type: 2}
+  - {fileID: 11400000, guid: 44e70ce7e1a0c417cbb2c1778b3cbca7, type: 2}
   probabilities:
     common: 70
     rare: 20
