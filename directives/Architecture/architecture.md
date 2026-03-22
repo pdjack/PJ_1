@@ -8,7 +8,9 @@
 ### 📂 관련 문서 목록 (Document Map)
 | 문서 | 경로 | 역할 |
 | :--- | :--- | :--- |
+| **문서 전체 맵** | [document-map.md](./document-map.md) | **[중앙 허브]** 모든 문서의 역할 및 업데이트 주기 관리 |
 | **기획서 (Proposal)** | [proposal.md](../Planning/proposal.md) | 게임 비전, 핵심 루프, 기믹 정의 |
+
 | **콘텐츠 상세 명세** | [content_spec.md](../Planning/content_spec.md) | 무기/병사 데이터 구조 및 종류 상세 정의 |
 | **에이전트 규칙** | [agent-rules.md](../Agent/agent-rules.md) | AI 협업 페르소나 및 운영 원칙 |
 | **코딩 컨벤션** | [coding-conventions.md](../Guidelines/coding-conventions.md) | 네이밍, 최적화, 구조 규칙 |
