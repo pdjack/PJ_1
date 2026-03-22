@@ -1,6 +1,7 @@
 # 📝 PJ_1 프로젝트 상세 기획서 (Project Proposal)
 
 이 문서는 프로젝트의 비전과 구체적인 구현 계획을 정리한 **공식 기획서**입니다.
+무기/병사의 상세 데이터 구조는 [content_spec.md](./content_spec.md)를, 기술 설계 전체도는 [architecture.md](../Architecture/architecture.md)를 참고해 주세요.
 
 ## 1. 프로젝트 개요 (Overview)
 - **프로젝트 명**: PJ_1
@@ -22,10 +23,13 @@
 ### 2.2 특수 기믹 및 조작 (Mechanics & Controls)
 - **휘두르기 시스템 (Swing System)**: 
     - 플레이어는 이동할 수 없습니다. 대신 터치 드래그 각도에 따라 대검, 도끼 등의 중세 무기를 휘둘러 적을 타격합니다.
+    - 구현: `PlayerAttack.cs` → 상세 데이터: [content_spec.md §1](./content_spec.md)
 - **보조 병사 시스템 (Sentinels)**: 
     - 플레이어 주변을 엄호하는 궁수나 보병 등 보조 유닛입니다. 사각지대를 보완하며 자동 공격을 수행합니다.
+    - 상세 데이터: [content_spec.md §2](./content_spec.md)
 - **어지러움 시스템 (Dizzy System)**: 
     - 과도한 회전 조작 시 **'어지러움' 디버프**가 발동되어 일정 시간 동안 조작이 제한됩니다.
+    - 구현: `PlayerAttack.cs` (DizzyRoutine)
 - **조작 방식**:
     - **이동**: **불가능 (Stationary)**
     - **공격**: **모바일 터치 기반 휘두르기 (Touch & Drag Rotation)**
@@ -33,7 +37,8 @@
 ## 3. 상세 기능 명세 (Feature Specifications)
 
 ### 3.1 플레이어 및 병사 시스템 (Player & Sentinels)
-- **능력치 관리(PlayerStat)**: 휘두르기 속도, 공격 범위, 체력 등을 SO로 관리합니다.
+- **능력치 관리(PlayerStat)**: 휘두르기 속도, 공격 범위, 체력 등을 SO로 관리합니다. 구현: `PlayerStat.cs` (Singleton)
+- **무기 데이터(EquipmentData)**: 무기별 공격력, 방어력, 프리팹을 SO로 관리합니다. 상세: [content_spec.md §1](./content_spec.md)
 - **모바일 UX**: 햅틱 피드백(진동)을 활용한 타격감 전달 기능을 포함합니다.
 
 ### 3.2 동적 웨이브 환경 (Dynamic Wave & Environment)
@@ -52,3 +57,4 @@
 - **Phase 2**: 10웨이브 단위 환경 전환 및 보스 시스템 연동.
 - **Phase 3**: UI Toolkit 기반의 모바일 최적화 인터페이스/포지셔닝 고도화.
 - **Phase 4**: 최종 밸런싱 테스트 및 사운드/공간 배경 완성.
+

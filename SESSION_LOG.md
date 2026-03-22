@@ -6,8 +6,8 @@
 
 | 날짜 | 에이전트 | 작업 내용 | 비고 |
 | :--- | :--- | :--- | :--- |
+| 2026-03-22 | Antigravity | MD 문서 체계 전면 동기화 (고아 파일 해소, 코드↔기획 매핑 추가, 용어 통일) | `architecture.md` 허브화, `content_spec.md` WeaponData→EquipmentData, `proposal.md` 상호참조, `getting-started.md` 4단계 추가, `coding-conventions.md` frontmatter 수정 |
 | 2026-03-22 | Antigravity | 멀티 에이전트 협업 환경 구축 (Phase 1-4 완료) | `architecture.md`, `agent-rules.md` 업데이트, `.claudefile` 생성 |
-| | | | |
 
 ## 주의사항 (Attention)
 - 새로운 작업 세션을 시작하면 위 표의 맨 위에 자신의 작업 내용을 한 줄로 요약해 주세요.

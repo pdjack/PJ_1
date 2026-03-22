@@ -1,21 +1,28 @@
 # 🛡️ PJ_1 중세 콘텐츠 상세 명세 (Content Specification)
 
 이 문서는 게임 내 핵심 전투 요소인 **중세 무기**와 **보조 병사**의 데이터 구조 및 종류를 상세히 정의합니다.
+게임 전체 기획은 [proposal.md](./proposal.md)를, 기술 설계 및 코드 매핑은 [architecture.md](../Architecture/architecture.md)를 참고하세요.
 
 ---
 
 ## 1. 메인 무기 시스템 (Main Weapons)
-플레이어가 터치 드래그로 직접 조작하는 휘두르기 무기입니다. 유니티 `WeaponData` ScriptableObject를 통해 관리합니다.
+플레이어가 터치 드래그로 직접 조작하는 휘두르기 무기입니다.
+유니티 `EquipmentData` ScriptableObject를 통해 관리합니다. (`Assets/ScriptableObjects/Item/Scripts/EquipmentData.cs`)
+> 상위 클래스: `ItemData` (`icon`, `type`, `description`)
 
 ### 📋 공통 데이터 구조 (Base Attributes)
-- `string displayName`: 무기 표시 이름
-- `float damage`: 기본 공격력
-- `float swingRadius`: 휘두르는 반경 (길이)
-- `float swingArc`: 타격 가능한 각도 (예: 120도 부채꼴)
-- `float swingSpeed`: 회전 추적 및 휘두르기 속도
-- `float knockback`: 타격 시 적을 밀어내는 힘
-- `float dizzyPenality`: 과도한 회전 시 발생하는 어지러움 디버프 수치
-- `GameObject prefab`: 무기 외형 프리팹
+| 필드 | 타입 | 설명 | 구현 상태 |
+| :--- | :--- | :--- | :--- |
+| `equipmentPrefab` | `GameObject` | 무기 외형 프리팹 | ✅ 구현됨 |
+| `damage` | `int` | 기본 공격력 | ✅ 구현됨 |
+| `defense` | `int` | 기본 방어력 | ✅ 구현됨 |
+| `swingRadius` | `float` | 휘두르는 반경 (길이) | ⬜ 미구현 |
+| `swingArc` | `float` | 타격 가능한 각도 (예: 120도 부채꼴) | ⬜ 미구현 |
+| `swingSpeed` | `float` | 회전 추적 및 휘두르기 속도 | ⬜ 미구현 |
+| `knockback` | `float` | 타격 시 적을 밀어내는 힘 | ⬜ 미구현 |
+| `dizzyPenalty` | `float` | 과도한 회전 시 어지러움 디버프 수치 | ⬜ 미구현 (현재 `PlayerAttack.cs`에 하드코딩) |
+
+> **참고**: `PlayerAttack.cs`의 `ROTATION_THRESHOLD(3600f)`, `DIZZY_DURATION(5f)`는 향후 `EquipmentData`의 SO 필드로 이전하여 무기별 차별화가 가능하도록 리팩토링 예정.
 
 ### ⚔️ 초기 무기 라이브러리 (Weapon Library)
 | 무기 이름 | 특징 | 주요 능력치 강점 |
@@ -29,6 +36,8 @@
 
 ## 2. 보조 병사 시스템 (Auxiliary Sentinels)
 플레이어 주변에서 자동으로 공격하여 사각지대를 방어하는 보조 유닛입니다. 유니티 `SentinelData` ScriptableObject를 통해 관리합니다.
+
+> ⬜ **SentinelData SO 클래스는 아직 미구현 상태입니다.**
 
 ### 📋 공통 데이터 구조 (Base Attributes)
 - `string soldierName`: 병사 이름/직함
@@ -61,3 +70,4 @@
 ## 4. 경제 및 업그레이드 연동 (Economy Integration)
 - **카드 구매**: 인게임에서 얻은 **경험치(EXP)**를 사용해 특정 무기를 강화하거나 보조 병사를 영입할 수 있습니다.
 - **강화 방식**: 기존 무기/병사의 SO 데이터를 참조하여 런타임에서 `modifier` 수치를 적용합니다. (예: `currentDamage * 1.5`)
+

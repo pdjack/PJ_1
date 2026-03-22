@@ -1,8 +1,5 @@
 ---
 trigger: always_on
----
-
----
 description: Unity C# 코딩 컨벤션 및 에셋 관리 최적화 규칙
 ---
 
