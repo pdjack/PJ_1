@@ -16,6 +16,7 @@
 | **코딩 컨벤션** | [coding-conventions.md](../Guidelines/coding-conventions.md) | 네이밍, 최적화, 구조 규칙 |
 | **성능 지침** | [performance.md](../Guidelines/performance.md) | SO 활용, 메모리, 오브젝트 풀링 |
 | **시작 가이드** | [getting-started.md](../GettingStarted/getting-started.md) | 초보자용 문서 읽기 순서 |
+| **Claude Code 가이드** | [CLAUDE.md](../../CLAUDE.md) | Claude Code AI 페르소나, 워크플로우, 커스텀 명령어 정의 |
 
 ---
 
@@ -116,3 +117,4 @@ graph TD
 - **에디터 스크립트 활용**: 다수의 오브젝트 조작이나 복잡한 환경 설정 시, 개별 MCP 호출보다 `PJ1_AutomationTools`와 같은 전용 툴을 활용하거나 임시 에디터 스크립트를 작성하여 작업 효율을 극대화합니다.
 - **작업 기록**: 주요 기능 변경 시 `SESSION_LOG.md` 또는 커밋 메시지에 상세 내용을 기록합니다.
 - **규칙 준수**: `Directives/Agent/agent-rules.md`에 정의된 페르소나와 작업 방식을 일관되게 적용합니다.
+- **커스텀 명령어 활용**: Claude Code 작업 시 `/plan`, `/git`, `/update` 명령어를 통해 표준화된 워크플로우를 적용합니다. 명령어 정의는 `.claude/commands/`에서 관리됩니다.

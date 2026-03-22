@@ -17,6 +17,7 @@
 | **상세 기획서** | [proposal.md](../Planning/proposal.md) | **저** | 마일스톤 단계 완료 및 핵심 컨셉 변경 시 | 프로젝트 비전, 핵심 루프 및 전체 마일스톤 |
 | **인터페이스 명세** | [interface_spec.md](../Planning/interface_spec.md) | **중** | 새로운 UI 컴포넌트 추가 및 UX 로직 변경 시 | 모든 UI/UX 요소의 디자인 및 동작 상세 정의 |
 | **플랜 작성 지침** | [plan.md](../Planning/plan.md) | **저** | 플랜 작성 방식이 변경될 때 | AI 에이전트가 플랜을 수립하는 표준 절차 정의 |
+| **Claude Code 가이드** | [CLAUDE.md](../../CLAUDE.md) | **고** | Claude Code 행동 원칙, 커스텀 명령어 변경 시 | Claude Code의 페르소나, 워크플로우, 커스텀 명령어 정의 |
 
 ---
 
