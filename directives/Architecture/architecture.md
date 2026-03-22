@@ -31,11 +31,15 @@
 AI 에이전트는 새 기능 구현 전 이 테이블을 참조하여 기존 구현을 먼저 파악해야 합니다.
 
 ### 3.1 ScriptableObject 데이터 클래스
+모든 밸런싱 데이터는 `ScriptableObject`를 통해 관리됩니다. 자세한 필드 정의와 구조는 **[세부 데이터 구조 문서](./data-structures.md)**를 참고하세요.
+
 | 스크립트 경로 | 클래스명 | 기획 문서 참조 | 설명 |
 | :--- | :--- | :--- | :--- |
 | `Assets/ScriptableObjects/Item/Scripts/ItemData.cs` | `ItemData` (abstract) | — | 모든 아이템의 기본 클래스 (icon, type, description) |
 | `Assets/ScriptableObjects/Item/Scripts/EquipmentData.cs` | `EquipmentData` | [content_spec.md §1](../Planning/content_spec.md) | 무기 데이터 (damage, defense, prefab) |
-| `Assets/ScriptableObjects/Monster/Scripts/MonAttackData.cs` | `MonAttackData` | — | 몬스터 공격 데이터 |
+| `Assets/ScriptableObjects/Monster/Scripts/MonsterData.cs` | `MonsterData` | — | 몬스터 최종 정의 데이터 |
+| `Assets/ScriptableObjects/Monster/Scripts/MonAttackData.cs` | `MonAttackData` | — | 몬스터 공격 데이터 (damage, speed, range) |
+| `Assets/ScriptableObjects/Card/Scripts/CardManager.cs` | `CardManager` | — | 카드 풀 및 획득 확률 제어 |
 
 ### 3.2 플레이어 시스템 스크립트
 | 스크립트 경로 | 클래스명 | 기획 문서 참조 | 설명 |
